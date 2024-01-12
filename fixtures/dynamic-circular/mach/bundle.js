@@ -1,5 +1,5 @@
 // MODULES START
-// Inline foo.js
+// src/foo.js
 async function import_foo() {
   const { bar } = await import('./index.js').then(m => m.import_bar())
   const foo = 'foo'
