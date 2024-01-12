@@ -1,11 +1,21 @@
 {
-  "name": "fixture-simple-dynamic",
+  "name": "fixture-commonjs",
+  "type": "module",
   "scripts": {
     "serve": "npx http-server -c=-1 -p=3000 .",
-    "build": "npx parcel build ./src/index.js --dist-dir dist --no-source-maps --no-cache --no-optimize --no-content-hash"
+    "build": "rm -rf parcel && npx parcel build --no-cache --no-content-hash"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
     "parcel": "^2.11.0"
+  },
+  "targets": {
+    "default" :{
+      "source": "src/index.js",
+      "distDir": "./parcel",
+      "outputFormat": "esmodule",
+      "optimize": true,
+      "sourceMap": false
+    }
   }
 }

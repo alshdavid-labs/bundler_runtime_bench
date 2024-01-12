@@ -3,8 +3,7 @@
   "type": "module",
   "scripts": {
     "serve": "npx http-server -c=-1 -p=3000 .",
-    "build": "rm -rf ./dist && npx parcel build --no-cache --no-content-hash",
-    "profile": "mkdir -p profiles && NODE_ENV=production node --prof dist/index.js && node --prof-process isolate-0x*.log > profiles/processed.txt && rm isolate-0x*.log"
+    "build": "rm -rf ./dist && npx parcel build --no-cache --no-content-hash"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
