@@ -1,4 +1,4 @@
-if (global.foo !== undefined) {
-  const bar = require('./bar')
+if (globalThis.foo === undefined) {
+  const { bar } = require('./bar')
   module.exports = `Hello ${bar}`
 }

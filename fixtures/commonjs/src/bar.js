@@ -1,1 +1,1 @@
-module.exports = 'world'
+module.exports.bar = 'world'

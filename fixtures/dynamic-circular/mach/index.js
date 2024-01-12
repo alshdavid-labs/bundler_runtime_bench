@@ -1,18 +1,16 @@
 // MODULES START
 // src/bar.js
-function import_bar() {
+export var import_bar = async () => {
   const bar = 'bar'
-  return import_bar = () => ({ bar }), import_bar()
+  return import_bar = (m => () => m)({ bar }), import_bar()
 }
 
 // src/baz.js
-function import_baz() {
+export var import_baz = async () => {
   const baz = 'baz'
   const output = (`baz::: baz.js baz(${baz})`)
-  return import_baz = () => ({ baz }), import_baz()
+  return import_baz = (m => () => m)({ baz }), import_baz()
 }
-
-export { import_bar, import_baz }
 // MODULES END
 
 // ENTRY
