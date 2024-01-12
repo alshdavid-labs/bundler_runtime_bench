@@ -15,10 +15,11 @@ export var import_baz = async () => {
 
 // ENTRY
 // src/index.js
-const { bar } = import_bar()
-const { baz } = import_baz();
+const { bar } = await import_bar()
+const { baz } = await import_baz();
   
 (async () => {
     const { foo } = await import('./bundle.js').then(m => m.import_foo())
     const output = (`index.js::: foo(${foo}); bar(${bar}); baz(${baz})`)
+    // console.log(output)
 })()
