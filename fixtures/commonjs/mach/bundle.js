@@ -8,7 +8,7 @@ export var import_foo = async () => {
     module.exports = `Hello ${bar}`
   }
 
-  return import_foo = (m => () => m)({             // COMMONJS DEOPT
+  return import_foo = (m => () => m)({     // COMMONJS DEOPT
     default: module.exports,
     ...(typeof module.exports === 'object' ? module.exports : {})
   }), import_foo()
@@ -20,7 +20,7 @@ export var import_bar = async () => {
 
   module.exports.bar = 'world'
 
-  return import_bar = (m => () => m)({             // COMMONJS DEOPT
+  return import_bar = (m => () => m)({     // COMMONJS DEOPT
     default: module.exports,
     ...(typeof module.exports === 'object' ? module.exports : {})
   }), import_bar()
