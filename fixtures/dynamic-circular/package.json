@@ -13,7 +13,7 @@
   "targets": {
     "default" :{
       "source": "src/index.js",
-      "distDir": "./dist",
+      "distDir": "./parcel",
       "outputFormat": "esmodule",
       "optimize": true,
       "sourceMap": false
