@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "checkJs": true,
+    "types": ["node"]
+  },
+  "include": [
+    "copy.mjs"
+  ]
+}
